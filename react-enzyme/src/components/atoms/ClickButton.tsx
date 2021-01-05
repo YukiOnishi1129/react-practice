@@ -10,11 +10,21 @@ export const ClickButton: React.FC<Props> = (props) => {
 
   return (
     <>
-      <div className="score">{score}</div>
-      <button className="plus" onClick={() => increment(score, changeScore)}>
+      <div data-testid="score" className="score">
+        {score}
+      </div>
+      <button
+        data-testid="plus"
+        className="plus"
+        onClick={() => increment(score, changeScore)}
+      >
         +
       </button>
-      <button className="minus" onClick={() => decrement(score, changeScore)}>
+      <button
+        data-testid="minus"
+        className="minus"
+        onClick={() => decrement(score, changeScore)}
+      >
         -
       </button>
     </>

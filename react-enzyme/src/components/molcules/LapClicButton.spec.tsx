@@ -1,6 +1,6 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import { LapClickButton } from './LapClicButton'
+import { render, screen, fireEvent, getByTestId } from '@testing-library/react'
 
 describe('atoms/ClickButtonの機能テスト', () => {
   let testScore = 0
@@ -8,23 +8,23 @@ describe('atoms/ClickButtonの機能テスト', () => {
   beforeEach(() => {
     testScore = 2
   })
-  it('ダミー', () => {
-    expect(1).toBe(1)
-  })
 
   // enzymeではmolculesの子コンポーネントのatomsの要素でイベント発火はできなかった。
-  // react-test-utilsではできるか確認
+  // react-test-utilsではできるか確認　→　できる
 
-  //   it('scoreをプラス', () => {
-  //     const wrapper = shallow(<LapClickButton propsScore={testScore} />)
-  //     console.log(wrapper.find('.plus'))
-  //     // simulateにて、クリックイベントを実行する
-  //     wrapper.find('.plus').at(1).simulate('click')
-  //     expect(wrapper.find('.score').text()).toEqual('3')
-  //   })
-  //   it('scoreをマイナス', () => {
-  //     const wrapper = shallow(<LapClickButton propsScore={testScore} />)
-  //     wrapper.find('.minus').simulate('click')
-  //     expect(wrapper.find('.score').text()).toEqual('1')
-  //   })
+  it('scoreをプラス', () => {
+    const wrapper = render(<LapClickButton propsScore={testScore} />)
+    //   screen.getByTestIdで"data-testidのDOMを取得できる
+    //   https://testing-library.com/docs/dom-testing-library/api-queries/#bytestid
+    //   fireEvent.clickの使い方はこちら
+    //   https://react-testing-library-examples.netlify.app/
+    fireEvent.click(wrapper.getByTestId('plus'))
+    //   wrapper.getByTestId('score').textContent: text文章を取得
+    expect(wrapper.getByTestId('score').textContent).toBe('3')
+  })
+  it('scoreをマイナス', () => {
+    const wrapper = render(<LapClickButton propsScore={testScore} />)
+    fireEvent.click(wrapper.getByTestId('minus'))
+    expect(wrapper.getByTestId('score').textContent).toBe('1')
+  })
 })

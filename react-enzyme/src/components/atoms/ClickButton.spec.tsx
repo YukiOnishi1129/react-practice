@@ -13,6 +13,8 @@ https: describe('clickボタン', () => {
     result.current.onChangeValue(value)
   }
   const click = jest.fn()
+  // https://qiita.com/akameco/items/519f7e4d5442b2a9d2da
+  const sel = (id: string) => `[data-testid="${id}"]`
   beforeEach(() => {
     // カスタムフックをテストコードで使う場合は、
     // act内で実行する
@@ -28,7 +30,7 @@ https: describe('clickボタン', () => {
         changeScore={(value) => onChange(value)}
       />
     )
-    expect(wrapper.find('.score').text()).toEqual('2')
+    expect(wrapper.find(sel('score')).text()).toEqual('2')
   })
   // テストコードでは、stateの更新をチェックするテストはできない
   it('scoreをプラス', () => {
@@ -39,7 +41,7 @@ https: describe('clickボタン', () => {
       />
     )
     // simulateにて、クリックイベントを実行する
-    wrapper.find('.plus').simulate('click')
+    wrapper.find(sel('plus')).simulate('click')
     expect(click.mock.calls.length).toBe(1)
     // expect(wrapper.find('.score').text()).toEqual('3')
   })
@@ -50,7 +52,7 @@ https: describe('clickボタン', () => {
         changeScore={(value) => click(value)}
       />
     )
-    wrapper.find('.minus').simulate('click')
+    wrapper.find(sel('minus')).simulate('click')
     expect(click.mock.calls.length).toBe(1)
     //   expect(wrapper.find('.score').text()).toEqual('1')
   })

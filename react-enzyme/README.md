@@ -8,3 +8,7 @@
 ## enzyme
 
 - [ReactComponent のテストについてまとめ](https://qiita.com/putan/items/c43afc15cbdccd28075f)
+
+## テスト
+
+- [id や class を使ってテストを書くのは、もはやアンチパターンである](https://qiita.com/akameco/items/519f7e4d5442b2a9d2da)
