@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { act, renderHook } from '@testing-library/react-hooks'
 import { ClickButton } from './ClickButton'
-import { useCustomState } from '../../lib/hooks/useCustomeState'
+import { useCustomState } from '../../lib/hooks/useCustomState'
 
 // テストコードでカスタムフックを使う場合
 //https://ksmzn.hatenablog.com/entry/react-hooks-testing-library
