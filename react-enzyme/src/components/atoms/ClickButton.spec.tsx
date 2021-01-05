@@ -42,6 +42,7 @@ https: describe('clickボタン', () => {
     )
     // simulateにて、クリックイベントを実行する
     wrapper.find(sel('plus')).simulate('click')
+    //   クリック回数が1回であること
     expect(click.mock.calls.length).toBe(1)
     // expect(wrapper.find('.score').text()).toEqual('3')
   })
@@ -53,6 +54,7 @@ https: describe('clickボタン', () => {
       />
     )
     wrapper.find(sel('minus')).simulate('click')
+    //   クリック回数が1回であること
     expect(click.mock.calls.length).toBe(1)
     //   expect(wrapper.find('.score').text()).toEqual('1')
   })

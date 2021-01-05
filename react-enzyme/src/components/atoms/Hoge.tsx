@@ -6,7 +6,7 @@ type Props = {
 
 const Hoge: React.FC<Props> = (props) => {
   const { title } = props
-  return <p className="state">{title}</p>
+  return <p role="title">{title}</p>
 }
 
 export default Hoge

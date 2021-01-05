@@ -1,6 +1,6 @@
 import React from 'react'
 import { LapClickButton } from './LapClicButton'
-import { render, screen, fireEvent, getByTestId } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 
 describe('atoms/ClickButtonの機能テスト', () => {
   let testScore = 0
@@ -13,18 +13,18 @@ describe('atoms/ClickButtonの機能テスト', () => {
   // react-test-utilsではできるか確認　→　できる
 
   it('scoreをプラス', () => {
-    const wrapper = render(<LapClickButton propsScore={testScore} />)
+    render(<LapClickButton propsScore={testScore} />)
     //   screen.getByTestIdで"data-testidのDOMを取得できる
     //   https://testing-library.com/docs/dom-testing-library/api-queries/#bytestid
     //   fireEvent.clickの使い方はこちら
     //   https://react-testing-library-examples.netlify.app/
-    fireEvent.click(wrapper.getByTestId('plus'))
+    fireEvent.click(screen.getByTestId('plus'))
     //   wrapper.getByTestId('score').textContent: text文章を取得
-    expect(wrapper.getByTestId('score').textContent).toBe('3')
+    expect(screen.getByTestId('score').textContent).toBe('3')
   })
   it('scoreをマイナス', () => {
-    const wrapper = render(<LapClickButton propsScore={testScore} />)
-    fireEvent.click(wrapper.getByTestId('minus'))
-    expect(wrapper.getByTestId('score').textContent).toBe('1')
+    render(<LapClickButton propsScore={testScore} />)
+    fireEvent.click(screen.getByTestId('minus'))
+    expect(screen.getByTestId('score').textContent).toBe('1')
   })
 })
