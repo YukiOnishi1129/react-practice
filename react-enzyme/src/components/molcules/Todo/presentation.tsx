@@ -4,13 +4,34 @@ import { Todo } from 'types/store/todos'
 
 type Props = {
   todo: Todo
+  editFlg: boolean
+  text: string
+  onChengeEditFlg: () => void
+  onChangeEditText: (e: any) => void
+  onUpdateTodo: (e: any) => void
+  onDeleteTodo: () => void
 }
 
 export const Presentation: React.FC<Props> = (props) => {
+  const editForm = props.editFlg ? (
+    <_EditInput
+      type="text"
+      className="editForm"
+      value={props.text}
+      onChange={props.onChangeEditText}
+      onKeyUp={props.onUpdateTodo}
+    />
+  ) : (
+    <_TodoTask onClick={props.onChengeEditFlg}>{props.todo.title}</_TodoTask>
+  )
+
   return (
     <_Todo>
-      <_TodoTask>{props.todo.title}</_TodoTask>
-      <i className="far fa-trash-alt delete fa-lg"></i>
+      {editForm}
+      <i
+        className="far fa-trash-alt delete fa-lg"
+        onClick={props.onDeleteTodo}
+      ></i>
     </_Todo>
   )
 }
