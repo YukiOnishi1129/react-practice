@@ -23,10 +23,10 @@ export const Todo: React.FC<Props> = (props) => {
    * Todo更新処理
    * @param e
    */
-  const onUpdateTodo = (e: any) => {
-    if (e.keyCode === 13) {
-      if (e.target.value !== '') {
-        props.updateTodo(props.todo.id, e.target.value)
+  const onUpdateTodo = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      if (e.currentTarget.value !== '') {
+        props.updateTodo(props.todo.id, e.currentTarget.value)
       } else {
         window.alert('未入力では編集できません')
         setEditText(props.todo.title)
@@ -40,7 +40,7 @@ export const Todo: React.FC<Props> = (props) => {
    *
    * @param e
    */
-  const updateEditText = (e: any) => {
+  const updateEditText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEditText(e.target.value)
   }
 

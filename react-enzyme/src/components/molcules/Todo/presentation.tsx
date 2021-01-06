@@ -7,14 +7,15 @@ type Props = {
   editFlg: boolean
   text: string
   onChengeEditFlg: () => void
-  onChangeEditText: (e: any) => void
-  onUpdateTodo: (e: any) => void
+  onChangeEditText: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onUpdateTodo: (e: React.KeyboardEvent<HTMLInputElement>) => void
   onDeleteTodo: () => void
 }
 
 export const Presentation: React.FC<Props> = (props) => {
   const editForm = props.editFlg ? (
     <_EditInput
+      role="editMode"
       type="text"
       className="editForm"
       value={props.text}
@@ -22,7 +23,9 @@ export const Presentation: React.FC<Props> = (props) => {
       onKeyUp={props.onUpdateTodo}
     />
   ) : (
-    <_TodoTask onClick={props.onChengeEditFlg}>{props.todo.title}</_TodoTask>
+    <_TodoTask role="showMode" onClick={props.onChengeEditFlg}>
+      {props.todo.title}
+    </_TodoTask>
   )
 
   return (

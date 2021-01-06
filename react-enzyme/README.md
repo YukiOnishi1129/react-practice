@@ -31,3 +31,18 @@
 ## テスト
 
 - [id や class を使ってテストを書くのは、もはやアンチパターンである](https://qiita.com/akameco/items/519f7e4d5442b2a9d2da)
+
+- [Facebook 製の JavaScript テストツール「Jest」の逆引き使用例] (https://qiita.com/chimame/items/e97883fd46b67529d59f)
+- [React Testing Library の使い方](https://qiita.com/ossan-engineer/items/4757d7457fafd44d2d2f)
+
+-[React Testing Library の使い方](https://blog.engineer.adways.net/entry/2020/06/12/150000)
+
+-[testing-library/jest-dom](https://github.com/testing-library/jest-dom)
+
+## event.target
+
+- [【TypeScript】event.target と event.currentTarget の違いについて](https://qiita.com/sitilma/items/f26f5d16e455a0c68071)
+
+  - keyDown にて event.currentTarget.value だとうまくいく
+
+- [DOM Keyboard イベントで押されたキーを判別するには key プロパティを使う] (https://qiita.com/ledsun/items/fb2570cc1542039f4516)

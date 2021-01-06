@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 type Props = {
-  onkeyUp: (e: any) => void
+  onkeyUp: (e: React.KeyboardEvent<HTMLInputElement>) => void
 }
 
 export const Presentaion: React.FC<Props> = (props) => {

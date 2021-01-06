@@ -10,8 +10,8 @@ export const SearchTodo: React.FC = () => {
    * 検索キーワード更新
    * @param e
    */
-  const searchTask = (e: any) => {
-    dispatch(searchTodo(e.target.value))
+  const searchTask = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    dispatch(searchTodo(e.currentTarget.value))
   }
 
   return <Presentaion onkeyUp={searchTask} />
