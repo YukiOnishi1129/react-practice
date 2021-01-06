@@ -1,10 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Presentaion: React.FC = () => {
+type Props = {
+  onkeyUp: (e: any) => void
+}
+
+export const Presentaion: React.FC<Props> = (props) => {
   return (
     <_CommonArea>
-      <_SearchInput type="text" placeholder="Search Keyword" />
+      <_SearchInput
+        type="text"
+        placeholder="Search Keyword"
+        onKeyUp={props.onkeyUp}
+      />
     </_CommonArea>
   )
 }
