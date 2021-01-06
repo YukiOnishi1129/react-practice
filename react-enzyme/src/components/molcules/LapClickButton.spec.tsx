@@ -1,5 +1,5 @@
 import React from 'react'
-import { LapClickButton } from './LapClicButton'
+import { LapClickButton } from './LapClickButton'
 import { render, screen, fireEvent } from '@testing-library/react'
 
 describe('atoms/ClickButtonの機能テスト', () => {
