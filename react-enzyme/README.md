@@ -5,6 +5,10 @@
 
 - [【入門・React・TypeScript・Enzyme】Create React App から Enzyme 導入まで](https://qiita.com/mpayu2/items/d2c86e006d93b7cc3127)
 
+### 絶対パス import
+
+- https://create-react-app.dev/docs/importing-a-component/#absolute-imports
+
 ## enzyme
 
 - [ReactComponent のテストについてまとめ](https://qiita.com/putan/items/c43afc15cbdccd28075f)
