@@ -16,7 +16,7 @@
     "plugin:react/recommended"
   ],
   "rules": {
-    "no-console": 2,
+    "no-console": 1,
     "prettier/prettier": "error",
     "no-unused-vars": 0,
     "@typescript-eslint/no-var-requires": 0,

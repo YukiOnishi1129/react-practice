@@ -1,14 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 import './index.css'
+import { reducer } from './store'
 // import App from './App'
 import { TodoPage } from './pages/todo'
 import reportWebVitals from './reportWebVitals'
 
+// storeの生成
+const store = createStore(reducer)
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <TodoPage />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 )
 
