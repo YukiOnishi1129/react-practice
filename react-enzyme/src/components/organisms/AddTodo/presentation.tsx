@@ -4,10 +4,11 @@ import styled from 'styled-components'
 type Props = {
   inputValue: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onKeyDown: (e: any) => void
 }
 
 export const Presentation: React.FC<Props> = (props) => {
-  const { inputValue, onChange } = props
+  const { inputValue, onChange, onKeyDown } = props
   return (
     <_CommonArea>
       <_AddTitle>ADD TASK</_AddTitle>
@@ -16,6 +17,7 @@ export const Presentation: React.FC<Props> = (props) => {
         placeholder="New Task"
         value={inputValue}
         onChange={onChange}
+        onKeyDown={onKeyDown}
       />
     </_CommonArea>
   )

@@ -41,6 +41,7 @@ export const TodoReducer = (state: Todos = initialState, action: Actions) => {
             title: action.payload.title,
           },
         ],
+        uniqueId: action.payload.id,
       }
 
     case TODO.UPDATE:
