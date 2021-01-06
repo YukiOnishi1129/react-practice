@@ -13,6 +13,7 @@ export const Presentation: React.FC<Props> = (props) => {
     <_CommonArea>
       <_AddTitle>ADD TASK</_AddTitle>
       <_AddInput
+        role="addInput"
         type="text"
         placeholder="New Task"
         value={inputValue}

@@ -1,15 +1,10 @@
 import React, { useReducer } from 'react'
-import { useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { Rootstate } from 'types/store'
 import { AddTodo } from 'components/organisms/AddTodo'
 import { SearchTodo } from 'components/organisms/SearchTodo'
 import { TodoList } from 'components/organisms/TodoList'
 
 export const TodoTemplate: React.FC = () => {
-  // const [state, dispatch] = useReducer(TodoReducer, initialState)
-  // useSelectorで取り出す
-  const state = useSelector((state: Rootstate) => state)
   return (
     <_Wrapper>
       <_Title>Todo List</_Title>

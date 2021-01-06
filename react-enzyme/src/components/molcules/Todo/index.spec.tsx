@@ -5,7 +5,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { Todo } from './index'
 import { Todo as TodoType } from 'types/store/todos'
 
-describe('Todoコンポーネント(ロジック)のテスト', () => {
+describe('Todoコンポーネントのテスト', () => {
   let todo: TodoType = {
     id: 1,
     title: 'テスト',
@@ -27,7 +27,6 @@ describe('Todoコンポーネント(ロジック)のテスト', () => {
     const showTodo = screen.queryByRole('showMode')
     expect(editInput).toBeInTheDocument()
     expect(showTodo).toBeFalsy()
-
     fireEvent.change(editInput, {
       target: {
         value: 'test',
@@ -37,7 +36,7 @@ describe('Todoコンポーネント(ロジック)のテスト', () => {
     expect(editInput).toHaveValue('test')
     // 編集inputフォームにてエンターキーをクリック
     // fireEvent.focus(editInput)
-    // fireEvent.keyDown(editInput, { key: 'Enter', keyCode: 13 })
+    // fireEvent.keyDown(editInput, { key: 'Enter' })
     // screen.debug()
   })
 })
