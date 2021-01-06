@@ -1,5 +1,5 @@
 import React from 'react'
-import { Presentation } from './presentation'
+import { Presentation } from 'components/organisms/AddTodo/presentation'
 
 export const Container = () => {
   const [inputValue, setInputValue] = React.useState('')

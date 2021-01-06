@@ -1,6 +1,6 @@
 import * as TODO from './consts'
 import { addTodo, searchTodo, updateTodo, deleteTodo } from './actions'
-import { Todos, Todo } from '../../types/store/todos'
+import { Todos, Todo } from 'types/store/todos'
 
 type Actions =
   | ReturnType<typeof addTodo>

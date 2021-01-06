@@ -1,9 +1,9 @@
 import React, { useReducer } from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { AddTodo } from '../organisms/AddTodo'
-import { SearchTodo } from '../organisms/SearchTodo'
-import { Rootstate } from '../../types/store'
+import { AddTodo } from 'components/organisms/AddTodo'
+import { SearchTodo } from 'components/organisms/SearchTodo'
+import { Rootstate } from 'types/store'
 
 const _Wrapper = styled.div`
   width: 90%;

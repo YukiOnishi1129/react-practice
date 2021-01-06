@@ -1,5 +1,5 @@
 import React from 'react'
-import { ClickButton } from '../atoms/ClickButton'
+import { ClickButton } from 'components/atoms/ClickButton'
 
 type Props = {
   propsScore: number

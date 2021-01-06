@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App'
-import Hoge from '../components/atoms/Hoge'
-import { LapClickButton } from '../components/molcules/LapClickButton'
+import Hoge from 'components/atoms/Hoge'
+import { LapClickButton } from 'components/molcules/LapClickButton'
 
 export const Sample = () => {
   const state = 'タイトル'
