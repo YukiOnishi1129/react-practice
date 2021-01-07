@@ -1,2 +1,2 @@
 # react-practice
-Node.js練習用リポジトリ
+React練習用リポジトリ
