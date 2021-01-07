@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+## 環境構築
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [create-react-app Lint 構築よくばりパック](https://qiita.com/jonakp/items/7d9f47c613c16cbf95aa)
+- [Create React App から Jest + Enzyme でテストを書き始める一番簡単なチュートリアル](https://qiita.com/jonakp/items/77ced9d9d6f4da4009c9)
 
-## Available Scripts
+- [【入門・React・TypeScript・Enzyme】Create React App から Enzyme 導入まで](https://qiita.com/mpayu2/items/d2c86e006d93b7cc3127)
 
-In the project directory, you can run:
+### 絶対パス import
 
-### `yarn start`
+- https://create-react-app.dev/docs/importing-a-component/#absolute-imports
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## enzyme
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [ReactComponent のテストについてまとめ](https://qiita.com/putan/items/c43afc15cbdccd28075f)
 
-### `yarn test`
+### enzyme の弱点
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- shollow マウントでは、子コンポーネントは取得できない
+- https://www.infoq.com/jp/news/2020/11/airbnb-drops-ownership-enzyme/
 
-### `yarn build`
+## react-testing-library
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [テストコードでカスタムフックを使う](https://ksmzn.hatenablog.com/entry/react-hooks-testing-library)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [fireEvent の使い方](https://react-testing-library-examples.netlify.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [screen.getByTestId で"data-testid の DOM を取得できる](https://testing-library.com/docs/dom-testing-library/api-queries/#bytestid)
 
-### `yarn eject`
+- [getTestId は非推奨、getByRole を使うように](https://sunday-morning.app/posts/2020-12-01-react-testing-library-next-js)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## テスト
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [id や class を使ってテストを書くのは、もはやアンチパターンである](https://qiita.com/akameco/items/519f7e4d5442b2a9d2da)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Facebook 製の JavaScript テストツール「Jest」の逆引き使用例] (https://qiita.com/chimame/items/e97883fd46b67529d59f)
+- [React Testing Library の使い方](https://qiita.com/ossan-engineer/items/4757d7457fafd44d2d2f)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-[React Testing Library の使い方](https://blog.engineer.adways.net/entry/2020/06/12/150000)
 
-## Learn More
+-[testing-library/jest-dom](https://github.com/testing-library/jest-dom)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## event.target
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [【TypeScript】event.target と event.currentTarget の違いについて](https://qiita.com/sitilma/items/f26f5d16e455a0c68071)
+
+  - keyDown にて event.currentTarget.value だとうまくいく
+
+- [DOM Keyboard イベントで押されたキーを判別するには key プロパティを使う] (https://qiita.com/ledsun/items/fb2570cc1542039f4516)

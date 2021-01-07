@@ -5,9 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #008080;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.far {
+  position: absolute;
+  top: 28px;
+  right: 10px;
+  width: 30px;
+  color: #ff9900;
+  cursor: pointer;
 }
